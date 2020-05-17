@@ -4,7 +4,7 @@
 <body>  
 <div class="embed-container">
   <iframe
-      src="https://www.youtube.com/embed/{{ Loav1kbA640 }}"
+      src="https://www.youtube.com/embed/{{ watch?v=Loav1kbA640 }}"
       width="700"
       height="480"
       frameborder="0"
