@@ -2,7 +2,7 @@
 <head>
 </head>
 <body>  
-<h1>These are video demos of few of my projects in deep learning. Other projects are either tied to an NDA or inaccessible to me due to COVID. I will update them as soon as I am able to access my main machine.</h1>
+<h2 style="box-sizing: border-box; font-size: 2em; margin-top: 0px; margin-bottom: 1rem; font-weight: normal; color: #159957; font-family: 'Times New Roman', 'Helvetica Neue', Helvetica, Arial, sans-serif; letter-spacing: normal; text-align: start; word-spacing: 0px;">These are video demos of few of my projects in deep learning. Other projects are either tied to an NDA or inaccessible to me due to COVID. I will update them as soon as I am able to access my main machine.</h2>
 <p>&nbsp;</p>
 <h2><strong>Repeat Action Counting in Videos:</strong></h2>
 <p>I used Deep Learning to count the frequency of a repeating motion. This project was a proof of concept made for a gymnasium which wanted to track its client's progress. It is an implementation of the paper "Live Repetition Counting".&nbsp;</p>
