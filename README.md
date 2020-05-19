@@ -23,6 +23,5 @@
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/mZ7V7HWgPao" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>
 </div>
 </div>
-</div>
 </body>
 </html>
