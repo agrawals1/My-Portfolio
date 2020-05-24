@@ -24,7 +24,7 @@
 </div>
 <h2 class="embed-container"><strong>Content Based Image Retrieval with Relevance Feedback</strong></h2>
 <div class="embed-container">&nbsp;</div>
-<div class="embed-container">This was my major project in college. It is an implementation of the paper "Relevance Feedback in Deep Convolutional Neural Networks for Content Based Image Retrieval". The aim of the paper is to retrieve images similar to a given input image by comparing the input image representations with the representations of the images in the database. Then using a feedback network, improve the retrieval accuracy.The dataset used was CALTECH 101</div>
+<div class="embed-container">This was my major project in college. It is an implementation of the paper "Relevance Feedback in Deep Convolutional Neural Networks for Content Based Image Retrieval". The aim of the paper is to retrieve images similar to a given input image by comparing the input image representations with the representations of the images in the database. Then using a feedback network, improve the retrieval accuracy.In the demo, I selected the aeroplane image as input image and the model spit out the top 10 images(from the dataset of 101 classes) which it thinks is the closest to the input image.The dataset used was CALTECH 101</div>
 <div class="embed-container">&nbsp;</div>
 <div class="embed-container">
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/kCcADHF2vYY" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>
