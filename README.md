@@ -32,5 +32,4 @@
 </div>
   <br>
 <h3 style="box-sizing: border-box; font-size: 2em; margin-top: 0px; margin-bottom: 1rem; font-weight: normal; color: #159957; font-family: 'Times New Roman', 'Helvetica Neue', Helvetica, Arial, sans-serif; letter-spacing: normal; text-align: start; word-spacing: 0px;">Other projects are either tied to an NDA or inaccessible to me due to COVID. I will update them as soon as I am able to access my main machine.</h3>
-</body>
-</html>
+
