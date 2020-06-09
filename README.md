@@ -31,9 +31,9 @@
 <div class="embed-container">&nbsp;</div>  
 </div>
   <br>
-<h2 class="embed-container"><strong>Content Based Image Retrieval with Relevance Feedback</strong></h2>
+<h2 class="embed-container"><strong>Spoof Detection and Face Recognition</strong></h2>
 <div class="embed-container">&nbsp;</div>
-<div class="embed-container">This was a fun personal project on face recognition and spoof detection</div>
+<div class="embed-container">This was a fun personal project</div>
 <div class="embed-container">&nbsp;</div>
 <div class="embed-container">
 <div class="embed-container"><iframe src="https://www.youtube.com/embed/qV2GNZ2hu8Q" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>
