@@ -31,5 +31,14 @@
 <div class="embed-container">&nbsp;</div>  
 </div>
   <br>
+<h2 class="embed-container"><strong>Content Based Image Retrieval with Relevance Feedback</strong></h2>
+<div class="embed-container">&nbsp;</div>
+<div class="embed-container">This was a fun personal project on face recognition and spoof detection</div>
+<div class="embed-container">&nbsp;</div>
+<div class="embed-container">
+<div class="embed-container"><iframe src="https://www.youtube.com/embed/qV2GNZ2hu8Q" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>
+<div class="embed-container">&nbsp;</div>  
+</div>
+<br>  
 <h3 style="box-sizing: border-box; font-size: 2em; margin-top: 0px; margin-bottom: 1rem; font-weight: normal; color: #159957; font-family: 'Times New Roman', 'Helvetica Neue', Helvetica, Arial, sans-serif; letter-spacing: normal; text-align: start; word-spacing: 0px;">Other projects are either tied to an NDA or inaccessible to me due to COVID. I will update them as soon as I am able to access my main machine.</h3>
 
