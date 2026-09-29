@@ -1,0 +1,6 @@
+crm_id,name,website,country,city,employees
+001A,Acme Corp.,https://www.acme.com/about,US,San Francisco,1200
+001B,ACME Corporation,acme.com,United States,SF,
+001C,Société Générale,societegenerale.fr,FR,Paris,117000
+001D,Globex,gmail.com,US,,40
+001E,Initech India Pvt Ltd,initech.co.in,IN,Hyderabad,300

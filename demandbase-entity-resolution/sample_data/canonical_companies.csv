@@ -1,0 +1,5 @@
+company_id,name,domain,country,parent_id,employees
+C1,Acme Corporation,acme.com,US,,1150
+C2,Societe Generale SA,societegenerale.com,FR,,117000
+C3,Initech Software Services,initech.co.in,IN,C9,280
+C9,Initech Inc,initech.com,US,,5000
