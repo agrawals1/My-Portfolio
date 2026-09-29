@@ -1,7 +1,7 @@
 # Problem 1 — Company Entity Resolution (CRM → canonical company universe)
 
 Reference solution for the Demandbase "AI-assisted coding" round. It is deliberately **small enough to read,
-re-type and explain in the time box** (~450 lines of code, 92 tests, runs in <1 s). It is *not* a
+re-type and explain in the time box** (~450 lines of core code, 92 tests, runs in <1 s). It is *not* a
 production system — it is what "production-shaped" looks like in 75 minutes.
 
 ```
@@ -12,13 +12,15 @@ er/
   scoring.py    Record, MatchScore, name_similarity, employee_compat, score_pair            (pure, no pandas)
   resolve.py    validate -> normalise -> block -> score -> decide  (+ ultimate parent)
   clusters.py   UnionFind + find_duplicates
+  spark_resolve.py  same pipeline in PySpark (explode+join blocking, pandas_udf scoring, Window pick)
   cli.py        python -m er.cli --crm sample_data/crm_accounts.csv --canonical sample_data/canonical_companies.csv
 tests/          normalize · blocking · scoring · resolve (golden sample, shuffling, ties, cycles, bad input)
 ```
 
 ```bash
 pip install -r requirements.txt
-python -m pytest -q                       # 92 passed
+python -m pytest -q                       # 92 passed (+3 Spark parity tests if pyspark is installed)
+pip install -e '.[spark]'                 # optional: pyspark 4.x + Java 17/21
 python -m er.cli --crm sample_data/crm_accounts.csv --canonical sample_data/canonical_companies.csv
 ```
 
@@ -73,6 +75,8 @@ python -m er.cli --crm sample_data/crm_accounts.csv --canonical sample_data/cano
 | 43–58 | `resolve.py`, `clusters.py` | Determinism + `reason`. |
 | 58–65 | Run sample, fix, `simplify` pass | |
 | 65–75 | Edge cases + discussion | Use the tables above; mention Spark / embeddings / eval. |
+
+See also: [INTERVIEW_TRAJECTORIES.md](INTERVIEW_TRAJECTORIES.md) (mock interviews) · [PYSPARK_CRASH_COURSE.md](PYSPARK_CRASH_COURSE.md) · [AI_CODING_PLAYBOOK.md](AI_CODING_PLAYBOOK.md)
 
 ## Stretch talking points (they mentioned LLMs, semantic ranking, RAG)
 
