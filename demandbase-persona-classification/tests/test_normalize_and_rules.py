@@ -13,6 +13,8 @@ from persona.rules import detect_function, detect_level, keyword_hit
     ("Head of InfoSec & Risk", "head of infosec and risk"),   # '&' is a symbol -> dropped, 'and' stays absent
     ("Directeur  Financier", "directeur financier"),
     ("Responsable Sécurité", "responsable securite"),
+    ("マーケティング部長", "マーケティング部長"),              # dakuten is not an accent: must survive
+    ("Ｍａｒｋｅｔｉｎｇ", "marketing"),                       # full-width -> ASCII via NFKC
     ("  ", ""), ("🎉🎉", ""), (None, ""), (float("nan"), ""), (42, ""),
 ])
 def test_normalize_title(raw, expected):

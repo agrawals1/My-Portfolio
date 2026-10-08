@@ -7,7 +7,7 @@ Reference solution for the semantic-layer "Filter Agent". The rule that makes it
 
 The model's only power is to *propose JSON*. Everything it returns is untrusted input to a strict validator; the
 compiler only accepts the validator's immutable AST, and only ever emits one parameterised `SELECT`.
-~450 lines, **zero runtime dependencies**, 87 tests (incl. property/fuzz tests), <2 s, fully offline (scripted LLM).
+~450 lines, **zero runtime dependencies**, 88 tests (incl. property/fuzz tests), <2 s, fully offline (scripted LLM).
 
 ```
 filteragent/
@@ -23,9 +23,11 @@ tests/           validate (strictness, fuzz) · compile (golden SQL, injection, 
 ```
 
 ```bash
-pip install pytest hypothesis && python -m pytest -q       # 87 passed
+pip install pytest hypothesis && python -m pytest -q       # 88 passed
 python -m filteragent.cli
 ```
+
+Mock interviews for this problem: [INTERVIEW_TRAJECTORIES.md](INTERVIEW_TRAJECTORIES.md)
 
 ## Behaviour on the brief's inputs
 

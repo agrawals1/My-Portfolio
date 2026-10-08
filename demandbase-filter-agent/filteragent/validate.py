@@ -36,8 +36,10 @@ def lookup_field(schema: Schema, name: object) -> FieldSpec:
 def _number(spec: FieldSpec, value: object) -> int | float:
     if isinstance(value, bool) or not isinstance(value, (int, float)) or not math.isfinite(value):
         raise ValidationError(f"{spec.label} needs a number, got {_show(value)}.", "bad_value")
-    if spec.min is not None and value < spec.min or spec.max is not None and value > spec.max:
-        raise ValidationError(f"{spec.label} must be between {spec.min} and {spec.max}.", "bad_value")
+    if spec.min is not None and value < spec.min:
+        raise ValidationError(f"{spec.label} must be at least {spec.min}.", "bad_value")
+    if spec.max is not None and value > spec.max:
+        raise ValidationError(f"{spec.label} must be at most {spec.max}.", "bad_value")
     return value
 
 

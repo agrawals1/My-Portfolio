@@ -2,7 +2,7 @@
 
 Reference solution for the Demandbase "stamping service": given a tenant's personas and a stream of raw titles, assign
 persona(s), level and function — **cheaply, deterministically, multilingual**. Small enough to re-type and explain
-(~400 lines, 69 tests, <1 s, no model downloads: the embedder and the LLM are pluggable interfaces with offline stand-ins).
+(~400 lines, 71 tests, <1 s, no model downloads: the embedder and the LLM are pluggable interfaces with offline stand-ins).
 
 ```
 persona/
@@ -17,9 +17,11 @@ tests/          normalize/rules (traps) · classify (golden sample, budget, dedu
 ```
 
 ```bash
-pip install -r requirements.txt && python -m pytest -q      # 69 passed
+pip install -r requirements.txt && python -m pytest -q      # 71 passed
 python -m persona.cli --contacts sample_data/contacts.csv --personas sample_data/personas.json
 ```
+
+Mock interviews for this problem: [INTERVIEW_TRAJECTORIES.md](INTERVIEW_TRAJECTORIES.md)
 
 ## The 60-second design pitch
 

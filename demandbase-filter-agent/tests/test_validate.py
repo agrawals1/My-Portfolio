@@ -56,6 +56,10 @@ def test_number_values_are_strict(schema, value):
     assert err(schema, group(cond("account.revenue_usd", ">", value))).code == "bad_value"
 
 
+def test_range_message_is_readable(schema):
+    assert err(schema, group(cond("account.revenue_usd", ">", -5))).message == "Revenue (USD) must be at least 0."
+
+
 @pytest.mark.parametrize("value", [[], [1], [None], ["US", "' OR 1=1 --"], {"a": 1}, None, 5])
 def test_enum_values_are_strict(schema, value):
     assert err(schema, group(cond("account.country", "in", value))).code == "bad_value"

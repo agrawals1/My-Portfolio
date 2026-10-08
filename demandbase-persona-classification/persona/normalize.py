@@ -25,12 +25,22 @@ business development strategy digital communications procurement and of the for 
 """.split())
 
 
+def _strip_latin_accents(decomposed: str) -> str:
+    """Drop combining marks only after ASCII letters (Sécurité -> Securite). Marks on other scripts carry
+    meaning (Japanese dakuten: グ is ク + mark), so they are kept and recomposed."""
+    out: list[str] = []
+    for ch in decomposed:
+        if unicodedata.combining(ch) and out and out[-1].isascii() and out[-1].isalpha():
+            continue
+        out.append(ch)
+    return unicodedata.normalize("NFKC", "".join(out))
+
+
 def normalize_title(value: object) -> str:
     """'Sr. Director, Demand Generation 🎉' -> 'senior director demand generation'. '' for non-strings/junk."""
     if not isinstance(value, str):
         return ""
-    text = unicodedata.normalize("NFKD", value)
-    text = "".join(ch for ch in text if not unicodedata.combining(ch))  # Sécurité -> Securite
+    text = _strip_latin_accents(unicodedata.normalize("NFKD", value))
     text = "".join(" " if unicodedata.category(ch)[0] in "SC" else ch for ch in text)  # emoji, symbols
     tokens = [t for t in _NON_WORD.split(text.casefold()) if t]
     return " ".join(_ABBREV.get(t, t) for t in tokens)
