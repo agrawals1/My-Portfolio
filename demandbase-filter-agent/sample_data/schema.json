@@ -1,0 +1,30 @@
+{
+  "root": {"table": "accounts", "alias": "a", "id_column": "account_id", "tenant_column": "tenant_id"},
+  "fields": {
+    "account.name": {"label": "Account name", "type": "string", "ops": ["contains", "="],
+                     "source": {"kind": "column", "column": "name"}},
+    "account.revenue_usd": {"label": "Revenue (USD)", "type": "number", "ops": [">", ">=", "<", "<=", "="],
+                            "min": 0, "source": {"kind": "column", "column": "revenue_usd"}},
+    "account.employee_count": {"label": "Employees", "type": "number", "ops": [">", ">=", "<", "<=", "="],
+                               "min": 0, "source": {"kind": "column", "column": "employees"}},
+    "account.industry": {"label": "Industry", "type": "enum", "ops": ["in", "not_in"],
+                         "values": ["Financial Services", "Software", "Healthcare", "Manufacturing", "Retail"],
+                         "source": {"kind": "column", "column": "industry"}},
+    "account.country": {"label": "Country", "type": "enum", "ops": ["in", "not_in"],
+                        "values": ["US", "IN", "GB", "DE"],
+                        "source": {"kind": "column", "column": "country"}},
+    "account.journey_stage": {"label": "Journey stage", "type": "enum", "ops": ["in"],
+                              "values": ["Target", "Aware", "Engaged", "Qualified", "Opportunity", "Customer"],
+                              "source": {"kind": "column", "column": "journey_stage"}},
+    "account.intent_strength": {"label": "Intent strength", "type": "enum", "ops": ["in"],
+                                "values": ["low", "medium", "high"],
+                                "source": {"kind": "child_exists", "table": "intent_scores", "fk": "account_id",
+                                           "column": "strength"}},
+    "opportunity.open_count": {"label": "Open opportunities", "type": "number", "ops": ["=", ">", ">="],
+                               "min": 0,
+                               "source": {"kind": "child_count", "table": "opportunities", "fk": "account_id",
+                                          "where": [["status", "open"]]}},
+    "account.beta_score": {"label": "Beta score", "type": "number", "ops": [">", "<"], "tenants": ["tenant_beta"],
+                           "source": {"kind": "column", "column": "beta_score"}}
+  }
+}
