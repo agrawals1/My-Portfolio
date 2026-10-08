@@ -1,0 +1,11 @@
+[
+  {"persona_id": "P_MKT_LEAD", "name": "Marketing Leader",
+   "include_keywords": ["marketing", "demand gen", "cmo"], "exclude_keywords": ["intern", "assistant", "student"],
+   "levels": ["Director", "VP", "C-Level"]},
+  {"persona_id": "P_IT_SEC", "name": "Security Decision Maker",
+   "include_keywords": ["security", "ciso", "infosec"], "exclude_keywords": ["intern", "guard", "assistant"],
+   "levels": ["Director", "VP", "C-Level"]},
+  {"persona_id": "P_FIN", "name": "Finance Approver",
+   "include_keywords": ["cfo", "finance", "controller"], "exclude_keywords": ["intern", "assistant"],
+   "levels": ["Director", "VP", "C-Level"]}
+]
